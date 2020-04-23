@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta name="charset" content="utf-8"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Login page</title>
+		<style>
+			
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 100%;
+				box-sizing: border-box;
+			
+				font-family: Verdana;
+			}
+
+			body{
+				
+				font-family: sans-serif;
+           background-image: url(chair-beside-book-shelves-2041540.jpg);
+		   background-size: 100%;
+
+			}
+
+			h1{
+				font-size: 25px;
+				text-align: center;
+				color: white;
+				background-color: #0c6fa0;
+                padding: 20px;
+			}
+ 
+
+            
+			form{
+			  
+				margin: 16px auto;
+				text-align: center;
+                margin-top:100px ;
+				padding-top: 60px;
+				/*background: url('image.png');*/
+				/* background: linear-gradient(lightblue, pink); */
+				background-color: white;
+				background-size: 100% 100%;
+				width:340px;
+				/* border: 3px solid #0c6fa0; */
+				border-radius: 0px 30px 0px 30px;
+				height: 300px;
+				color: #000;
+				font-size: 1.8em;
+				font-style: italic;
+				box-shadow: 6px 6px 8px #666;
+                /* border-radius: 30px; */
+				font-size: 0.93em;
+                transition: all 0.3s;
+				font-weight: bolder;
+			}
+				input{
+                height:35px;
+			    
+            	border: 0;
+				outline: 0;
+			
+				border-bottom: 1px solid black;
+                 font-size: 1.em;
+            }
+           
+            form:hover{
+				border-radius: 30px 0px 30px 0px;
+				 
+				background-color: aqua;
+			  
+
+            }
+
+			button:hover{
+				 background-color: blue;
+				 color:white;
+				 border-radius: 0px 8px 0px 8px;
+			}
+
+
+            
+            
+            footer{
+            	background: #000;
+            	color: #fff;
+            	width: 100%;
+            	text-align: center;
+            	font-size: 1.4em;
+            	padding: 8px;
+            	position: absolute; 
+        bottom: 0px; 
+            }
+
+            button{
+                border: 1px solid #fff;
+                border-radius: 8px 0px 8px 0px;
+                width: 100px;
+                color: #fff;
+                transition: all 0.3s;
+                background-color: black;
+                height: 45px;}
+				
+				
+            
+		</style>
+
+	</head>
+	<body>
+
+		<h1>Login or Register</h1>
+ 
+		
+		<form method="POST">
+			
+			<div style="display: block; margin-bottom: 10px">
+			    <label>Username:</label>
+			    <input type="text" id="userName" >
+		    </div>
+<br><br>
+		   
+			    
+				Password:<input type="password" id="userPass"> 
+				<br>
+				<input type="checkbox" onclick="showPassword()">Show Password
+				
+				  <br><br><br>
+                <button  type="submit" onclick="checkIt()">Login <i class="fa fa-sign-in"></i></button>
+                <button  type="submit" onclick="clr()">Clear</button>
+            
+            
+		</form>
+
+		<footer>
+			<address>Developed by Noor Nabi &copy;2020</address>
+		</footer>
+
+
+        <script>
+
+			function clr()
+			{
+				document.getElementsByTagName('input').value ='';
+			}
+
+			 function  checkIt() 
+			 {
+				 var Uname = document.getElementById('userName').value;
+				 var Upass = document.getElementById('userPass').value;
+
+				  if(Uname =="" || Upass =="")
+				 {
+					 alert('All inputs are Required');
+				 }
+
+				  else {
+
+				 if(Uname.length < 3)
+				 {
+					 alert('Enter Maximum 3 chaarcters User Name');
+				 }
+
+
+				else  if(Upass.length < 6)
+				 {
+					 alert('Enter Maximum 3 chaarcters User Password');
+				 }
+
+				 else {
+					 alert('Login successful !');
+				 }
+      
+				}
+				
+			 }
+
+
+			 function showPassword()
+			 {
+
+				var x =  document.getElementById('userPass'); 
+				 if(x.type  ==="password")
+				 {
+                       x.type = "text";
+				 }
+
+				 else {
+					 x.type = "password";
+				 }
+
+			 }
+			
+        </script>
+	</body>
+</html>
